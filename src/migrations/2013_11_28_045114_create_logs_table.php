@@ -22,7 +22,7 @@ class CreateLogsTable extends Migration {
 		{
 		    $table->bigIncrements('id');
 		    $table->string('channel', 50)->index();
-		    $table->string('message', 255);
+		    $table->text('message');
 		    $table->string('level', 50)->index();
 		    $table->string('level_name', 100);
 		    $table->text('context');
