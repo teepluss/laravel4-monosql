@@ -20,6 +20,8 @@ class CreateLogsTable extends Migration {
 	{
 		Schema::create($this->table, function($table)
 		{
+			$table->engine = 'InnoDB';
+
 		    $table->bigIncrements('id');
 		    $table->string('channel', 50)->index();
 		    $table->text('message');
